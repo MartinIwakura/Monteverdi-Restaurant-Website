@@ -1,0 +1,256 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+body {
+    font-family: 'Quattrocento', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFBE79;
+    color: #474e5d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar */ 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 5%;
+    background-color: #FFBE79;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img{
+    width: 200px; 
+    height: auto; 
+    margin-right: 5px; 
+    margin-top: 25%;
+    margin-left: 10px; 
+    transition: all 0.3s ease;
+    
+  
+  }
+  
+  .logo.clicked img {
+    margin-right: 5%;
+    margin-left: 10%;
+  }
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.692);
+    border-radius: 20px;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #E8772E;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #BA3B0A;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-nos {
+    text-align: center;
+    background-color: #BA3B0A;
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.conteudo-restaurante {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bloco {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.bloco:hover {
+    transform: scale(1.05);
+}
+
+.bloco:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.bloco:nth-child(even) {
+    align-self: flex-end;
+}
+
+.bloco .titulo {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.bloco .descricao {
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .conteudo-restaurante {
+        flex-direction: column;
+    }
+
+    .bloco {
+        width: 100%;
+    }
+
+    .bloco:nth-child(odd), .bloco:nth-child(even) {
+        align-self: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar ul {
+        padding: 0 10vw;
+        margin-right: 20vw;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+}
+
+
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode .sobre-nos {
+    background-color: #fff !important;
+    color: #000 !important; 
+}
+
+
+body.dark-mode .navbar {
+    background-color: #222;
+}
+
+body.dark-mode .navbar ul li a {
+    color: #ddd;
+}
+
+body.dark-mode .navbar ul li a:hover {
+    color: #fff;
+}
+
+body.dark-mode .sobre-nos {
+    background-color: #333; 
+    color: #fff; 
+}
+
+body.dark-mode .bloco {
+    background-color: #fff; 
+    color: #000; 
+}
+
+body.dark-mode .footer {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilos do botão de alternância do modo escuro */
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+}
+
+#darkModeToggle:hover {
+    background-color: #d14126;
+    color: #fff;
+}
+
+/* Estilo para a logo quando em modo escuro */
+body.dark-mode .logo img {
+    content: url('/imagens/logobranca.png'); /* URL da logo para o modo escuro */
+    width: 260px; 
+    
+  }
