@@ -1,0 +1,1 @@
+Monteverdi Restaurant Website: A responsive website developed with HTML, CSS, and JavaScript, simulating an online presence for the fictional Monteverdi restaurant. Includes interactive menus, reservation form, and homepage animations.
